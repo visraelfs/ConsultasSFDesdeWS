@@ -13,7 +13,7 @@ namespace ConsultasSFDesdeWS
         {
 
             //Generamos la consulta
-            string customQuery = "SELECT CloseDate,Name,(SELECT id,Product2.Name, Referencia_Elara__r.Referencia__c, Referencia_Elara__r.Status_COS__c, Referencia_Elara__r.Fecha_Activo__c,Referencia_Elara__r.Fecha_Desinstalado__c, Referencia_Elara__r.Fecha_Desactivado__c, Referencia_Elara__r.Fecha_Reemplazo__c,Referencia_Elara__r.Fecha_Cancelado__c, Referencia_Elara__r.Fecha_Entregado__c, Referencia_Elara__r.Fecha_Concluido__c FROM OpportunityLineItems) FROM Opportunity WHERE CloseDate >= 2022-11-01 and CloseDate <= 2022-12-31 and StageName = 'Cierre'";
+            string customQuery = "SELECT CloseDate,Name,(SELECT id,Product2.Name, Referencia_Elara__r.Referencia__c, Referencia_Elara__r.Status_COS__c, Referencia_Elara__r.Fecha_Activo__c,Referencia_Elara__r.Fecha_Desinstalado__c, Referencia_Elara__r.Fecha_Desactivado__c, Referencia_Elara__r.Fecha_Reemplazo__c,Referencia_Elara__r.Fecha_Cancelado__c, Referencia_Elara__r.Fecha_Entregado__c, Referencia_Elara__r.Fecha_Concluido__c FROM OpportunityLineItems) FROM Opportunity WHERE CloseDate >= 2022-11-01 and StageName = 'Cierre'";
 
             WCFSalesForceCoSCall call = new WCFSalesForceCoSCall();
 
